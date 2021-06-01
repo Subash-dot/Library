@@ -1,0 +1,56 @@
+﻿@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bob Book Store</title>
+</head>
+<body>
+    <h1>Bob Book Store</h1>
+
+    @{
+        int a = 10;
+        int b = 20;
+    }
+
+
+    <h2>The value of b is @(a==10?b=10:b=5)</h2>
+
+    <h2>Switch statement.</h2>
+    @switch (a)
+    {
+        case 0:
+            <h1>The vlaue of a is 0.</h1>;
+            break;
+        case 1:
+            <h1>The vlaue of a is 1.</h1>;
+            break;
+        case 2:
+            <h1>The vlaue of a is 2.</h1>;
+            break;
+        case 3:
+            <h1>The vlaue of a is 3.</h1>;
+            break;
+        default:
+            <h1>a is greater than 3</h1>
+            break;
+    }
+
+    @for (int i = 0; i < 10; i++)
+    {
+        <h2>For loop index is @i</h2>
+    }
+
+
+    @{ var numbers = new List<int>() { 1, 23, 4, 5, 6, 7, 8, 9 };
+        }
+    
+    @foreach (var item in numbers)
+    {
+        <h2>@item</h2>
+    }
+    <p>This is our home page.</p>
+</body>
+</html>

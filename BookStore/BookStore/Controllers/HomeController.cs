@@ -8,9 +8,15 @@ namespace BookStore.Controllers
 {
     public class HomeController:Controller
     {
-        public string index()
+        public ViewResult Index()
         {
-            return "Vadim Blyat";
+            var obj = new { id =1,Name ="name", Address="address" };
+            return View(obj);
+        }
+
+        public ViewResult AboutUs()
+        {
+            return View();
         }
     }
 }

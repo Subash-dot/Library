@@ -16,6 +16,8 @@ namespace BookStore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,14 +28,41 @@ namespace BookStore
                 app.UseDeveloperExceptionPage();
             }
 
+
+            //these commented codes are the concept of the middleware. these are 3 middleware and passes throught
+            //first, second third and return to second, first.
+            /*app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Hello form my first middleware pipeline. ");
+
+                await next();
+
+                await context.Response.WriteAsync("First Response?? ");
+
+            });
+
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Hello form my second middleware pipeline. ");
+
+                await next();
+
+                await context.Response.WriteAsync("Second Response?? ");
+
+            });
+
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("Hello form my Third middleware pipeline. ");
+
+                await next();
+            });*/
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
