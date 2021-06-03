@@ -27,11 +27,11 @@ namespace BookStore.Repositary
         {
             return new List<BookModel>()
             {
-                new BookModel(){Id=1,Title="Lord",Author="Baggins" },
-                new BookModel(){Id=1,Title="Power of now",Author="idontno" },
-                new BookModel(){Id=1,Title="gtav",Author="franklin" },
-                new BookModel(){Id=1,Title="tervor industries",Author="trevor" },
-                new BookModel(){Id=1,Title="loveyou",Author="akon" }
+                new BookModel(){Id=1,Title="Lord",Author="Baggins", Description="This is the Desctiption of Lord Book.",Category="Fantasty",TotalPages=200,Language="Bhojpuri" },
+                new BookModel(){Id=2,Title="Power of now",Author="idontno", Description="This is the Desctiption of Power of now Book.",Category="Self help",TotalPages=38,Language="Nepali" },
+                new BookModel(){Id=3,Title="gtav",Author="franklin",Description="This is the Desctiption of gta v Book.",Category="Game",TotalPages=500,Language="English" },
+                new BookModel(){Id=4,Title="tervor industries",Author="trevor",Description="This is the Desctiption of Trevor Industries Book.",Category="Business",TotalPages=332,Language="japanese" },
+                new BookModel(){Id=5,Title="loveyou",Author="akon",Description="This is the Desctiption of Love You Book.",Category="Love",TotalPages=987,Language="English" }
             };
         }
     }

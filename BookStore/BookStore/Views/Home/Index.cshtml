@@ -1,56 +1,78 @@
-﻿@{ 
-    Layout = null;
+﻿
+
+
+
+
+
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Welcome to Bob Book Store</h1>
+        <p class="lead text-muted">
+            One hour book a day keep stress away.
+        </p>
+        <p>
+            <a href="#" class="btn btn-success">Serach Books</a>
+
+        </p>
+    </div>
+</section>
+
+
+<div class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="card-img img-thumbnail" width="100%" height="225"></svg>
+                    <div class="card-body">
+                        <p class="card-text"> This section is description of book.</p>
+                        <div class="d-flex justify-content-between align-item-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-outline-primary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="card-img img-thumbnail" width="100%" height="225"></svg>
+                    <div class="card-body">
+                        <p class="card-text"> This section is description of book.</p>
+                        <div class="d-flex justify-content-between align-item-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-outline-primary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="card-img img-thumbnail" width="100%" height="225"></svg>
+                    <div class="card-body">
+                        <p class="card-text"> This section is description of book.</p>
+                        <div class="d-flex justify-content-between align-item-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn  btn-outline-primary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section homesctipt{
+    <script>
+        $(document).ready(function () {
+            //alert("I am interpt you this is home page.");
+        })
+    </script>
 }
-
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Bob Book Store</title>
-</head>
-<body>
-    <h1>Bob Book Store</h1>
-
-    @{
-        int a = 10;
-        int b = 20;
-    }
-
-
-    <h2>The value of b is @(a==10?b=10:b=5)</h2>
-
-    <h2>Switch statement.</h2>
-    @switch (a)
-    {
-        case 0:
-            <h1>The vlaue of a is 0.</h1>;
-            break;
-        case 1:
-            <h1>The vlaue of a is 1.</h1>;
-            break;
-        case 2:
-            <h1>The vlaue of a is 2.</h1>;
-            break;
-        case 3:
-            <h1>The vlaue of a is 3.</h1>;
-            break;
-        default:
-            <h1>a is greater than 3</h1>
-            break;
-    }
-
-    @for (int i = 0; i < 10; i++)
-    {
-        <h2>For loop index is @i</h2>
-    }
-
-
-    @{ var numbers = new List<int>() { 1, 23, 4, 5, 6, 7, 8, 9 };
-        }
-    
-    @foreach (var item in numbers)
-    {
-        <h2>@item</h2>
-    }
-    <p>This is our home page.</p>
-</body>
-</html>

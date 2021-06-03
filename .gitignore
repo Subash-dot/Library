@@ -4,5 +4,5 @@
 
 /BookStore/.vs/BookStore/v16
 /BookStore/BookStore/obj
-/BookStore/BookStore/Controllers/HomeController.cs
 /BookStore/BookStore/BookStore.csproj.user
+/BookStore/BookStore/bin/Debug/netcoreapp3.1/refs
